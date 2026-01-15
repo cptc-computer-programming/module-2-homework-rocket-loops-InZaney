@@ -61,7 +61,15 @@ public class RocketShip {
       Print +=*=*=*...=+ to fit the width of the rocket.
      */
     public static void printEdge() {
-        // your code goes here.
-        System.out.println("An edge should be here.");
+        // begin with +
+        System.out.print("+");
+
+        // loop =* with SIZE * 2
+        for (int i = 0; i < ROCKET_SIZE * 2; i ++) {
+            System.out.print("=*");
+        }
+
+        // end with + and new line
+        System.out.println("+");
     }
 }
