@@ -23,8 +23,36 @@ public class RocketShip {
      of //...\\ on either side.
      */
     public static void printNoseCone() {
-        // your code goes here.
-        System.out.println("A nose cone should be here.");
+
+        for (int row = 0; row < ROCKET_SIZE *2; row ++) {
+        // leading spaces
+        int spaces = (ROCKET_SIZE * 2 - 1) - row;
+        for (int i = 0; i < spaces; i ++) {
+            System.out.print(" ");
+        }
+
+        // print /
+        int sides = row + 1;
+        for (int i = 0; i < sides; i ++) {
+            System.out.print("/");
+        }
+
+        // print *
+        System.out.print("**");
+
+        // print \
+        for (int i = 0; i < sides; i ++) {
+            System.out.print("\\");
+        }
+
+        // print trailing spaces
+        for (int i = 0; i < spaces; i ++) {
+            System.out.print(" ");
+        }
+        
+        System.out.println();
+        }
+        
     }
     
     /**
