@@ -1,4 +1,9 @@
-// Your header comment goes here.
+/* Zane Marcoe
+CPW 140
+Assignment #2
+
+This program will create a rocket ship using loops 
+*/
 
 public class RocketShip {
     public static final int ROCKET_SIZE = 3;
@@ -23,8 +28,36 @@ public class RocketShip {
      of //...\\ on either side.
      */
     public static void printNoseCone() {
-        // your code goes here.
-        System.out.println("A nose cone should be here.");
+
+        for (int row = 0; row < (ROCKET_SIZE *2) - 1; row ++) {
+        // leading spaces
+        int spaces = (ROCKET_SIZE * 2 - 1) - row;
+        for (int i = 0; i < spaces; i ++) {
+            System.out.print(" ");
+        }
+
+        // print /
+        int sides = row + 1;
+        for (int i = 0; i < sides; i ++) {
+            System.out.print("/");
+        }
+
+        // print *
+        System.out.print("**");
+
+        // print \
+        for (int i = 0; i < sides; i ++) {
+            System.out.print("\\");
+        }
+
+        // print trailing spaces
+        for (int i = 0; i < spaces; i ++) {
+            System.out.print(" ");
+        }
+        
+        System.out.println();
+        }
+        
     }
     
     /**
@@ -46,22 +79,88 @@ public class RocketShip {
      Print the top half of two diamonds between vertical lines.
      */
     public static void printDiamondTop() {
-        // your code goes here.
-        System.out.println("A diamond top should be here.");
+        // loop total rows in top half
+        for (int row = 0; row < ROCKET_SIZE; row ++) {
+
+            // start with |
+            System.out.print("|");
+
+            // repeat pattern twice
+            for (int pattern = 0; pattern < 2; pattern ++) {
+
+                // leading dots
+                int dots = (ROCKET_SIZE - 1) - row;
+                for (int i = 0; i < dots; i ++) {
+                    System.out.print(".");
+                }
+
+                // triangles
+                int triangles = row + 1;
+                for (int i = 0; i < triangles; i ++) {
+                    System.out.print("/\\");
+                }
+
+                // print trailing dots
+                for (int i = 0; i < dots; i ++) {
+                    System.out.print(".");
+                }
+            }
+
+            // end with | and new line
+            System.out.println("|");
+        }
+        
     }
     
     /**
      Print the bottom half of two diamonds between vertical lines.
      */
     public static void printDiamondBottom() {
-        // your code goes here.
-        System.out.println("A diamond bottom should be here.");
+        // loop total rows in bottom half
+        for (int row = 0; row < ROCKET_SIZE; row ++) {
+
+            // start with |
+            System.out.print("|");
+
+            // repeat pattern twice
+            for (int pattern = 0; pattern < 2; pattern ++) {
+
+                // leading dots
+                int dots = row;
+                for (int i = 0; i < dots; i ++) {
+                    System.out.print(".");
+                }
+
+                // triangles
+                int triangles = ROCKET_SIZE - row;
+                for (int i = 0; i < triangles; i ++) {
+                    System.out.print("\\/");
+                }
+
+                // print trailing dots
+                for (int i = 0; i < dots; i ++) {
+                    System.out.print(".");
+                }
+            }
+
+            // end with | and new line
+            System.out.println("|");
+        }
     }
+
     /**
       Print +=*=*=*...=+ to fit the width of the rocket.
      */
     public static void printEdge() {
-        // your code goes here.
-        System.out.println("An edge should be here.");
+        // begin with +
+        System.out.print("+");
+
+        // loop =* with SIZE * 2
+        for (int i = 0; i < ROCKET_SIZE * 2; i ++) {
+            System.out.print("=*");
+        }
+
+        // end with + and new line
+        System.out.println("+");
     }
 }
