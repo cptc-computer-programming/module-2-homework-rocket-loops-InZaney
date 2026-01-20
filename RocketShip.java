@@ -24,7 +24,7 @@ public class RocketShip {
      */
     public static void printNoseCone() {
 
-        for (int row = 0; row < ROCKET_SIZE *2; row ++) {
+        for (int row = 0; row < (ROCKET_SIZE *2) - 1; row ++) {
         // leading spaces
         int spaces = (ROCKET_SIZE * 2 - 1) - row;
         for (int i = 0; i < spaces; i ++) {
