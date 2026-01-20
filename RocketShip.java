@@ -1,4 +1,9 @@
-// Your header comment goes here.
+/* Zane Marcoe
+CPW 140
+Assignment #2
+
+This program will create a rocket ship using loops 
+*/
 
 public class RocketShip {
     public static final int ROCKET_SIZE = 3;
@@ -101,7 +106,7 @@ public class RocketShip {
                 }
             }
 
-            // end with |
+            // end with | and new line
             System.out.println("|");
         }
         
@@ -138,7 +143,7 @@ public class RocketShip {
                 }
             }
 
-            // end with |
+            // end with | and new line
             System.out.println("|");
         }
     }
