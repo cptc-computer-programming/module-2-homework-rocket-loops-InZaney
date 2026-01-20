@@ -111,8 +111,38 @@ public class RocketShip {
      Print the bottom half of two diamonds between vertical lines.
      */
     public static void printDiamondBottom() {
-        
+        // loop total rows in bottom half
+        for (int row = 0; row < ROCKET_SIZE; row ++) {
+
+            // start with |
+            System.out.print("|");
+
+            // repeat pattern twice
+            for (int pattern = 0; pattern < 2; pattern ++) {
+
+                // leading dots
+                int dots = row;
+                for (int i = 0; i < dots; i ++) {
+                    System.out.print(".");
+                }
+
+                // triangles
+                int triangles = ROCKET_SIZE - row;
+                for (int i = 0; i < triangles; i ++) {
+                    System.out.print("\\/");
+                }
+
+                // print trailing dots
+                for (int i = 0; i < dots; i ++) {
+                    System.out.print(".");
+                }
+            }
+
+            // end with |
+            System.out.println("|");
+        }
     }
+
     /**
       Print +=*=*=*...=+ to fit the width of the rocket.
      */
